@@ -6,13 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/main_button"
-        android:layout_width="389dp"
-        android:layout_height="584dp"
-        android:backgroundTint="#E8E8E8"
-        android:text="Clique sur le bouton pour commencer !"
-        android:textColor="#000000"
+    <!-- layout_height = 0dp ca fill le reste espace blanche-->
+
+    <TextView
+        android:id="@+id/affichEssai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Essai 1 de 5"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="11dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#D0D0D0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/affichEssai"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone"></Chronometer>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Attendez que le boutton devienne jaune"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chronometer"
+        app:layout_constraintVertical_bias="0.45"
+        android:backgroundTint="#D0D0D0"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
